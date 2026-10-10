@@ -1,0 +1,55 @@
+/* ========================================
+   THEME TOGGLE STYLES
+   ======================================== */
+
+.toggleBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-full);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-card);
+  user-select: none;
+}
+
+.toggleBtn:hover {
+  background: var(--bg-glass-hover);
+  border-color: var(--border-accent);
+  transform: translateY(-1px);
+}
+
+.toggleBtn:active {
+  transform: translateY(0);
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--bg-glass);
+  color: var(--accent-amber);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+[data-theme='dark'] .iconWrapper {
+  color: var(--accent-indigo-light);
+}
+
+.label {
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+}
